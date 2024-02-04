@@ -1,0 +1,17 @@
+{% extends "master.html" %}
+
+{% block title %}
+  EdNotes - List of All Users in Adeola`s Webpage
+{% endblock %}
+
+
+{% block content %}
+  <h1>Members</h1>
+  
+  
+<ul>
+  {% for x in myusers %}
+    <li><a href="/details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></li>
+  {% endfor %}
+</ul>  
+{% endblock %}
